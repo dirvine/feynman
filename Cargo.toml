@@ -1,0 +1,7 @@
+[package]
+authors = ["David Irvine <david.irvine@maidsafe.net>"]
+name = "feynman"
+version = "0.1.0"
+
+[dependencies]
+sysfs_gpio = "0.4.4"

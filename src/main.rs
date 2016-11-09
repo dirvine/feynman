@@ -3,20 +3,18 @@ extern crate feynman;
 use feynman::eyes;
 use std::thread::sleep;
 use std::time::Duration;
-use std::io::prelude::*;
-use std::io::stdout;
 
 
 fn main() {
     let eyes = eyes::Eyes::new().unwrap();
     loop {
-        eyes.blue();
+        eyes.blue().unwrap();
         sleep(Duration::from_millis(500));
-        eyes.green();
+        eyes.green().unwrap();
         sleep(Duration::from_millis(500));
-        eyes.red();
+        eyes.red().unwrap();
         sleep(Duration::from_millis(500));
-        eyes.closed();
+        eyes.closed().unwrap();
         sleep(Duration::from_millis(500));
     }
 }
